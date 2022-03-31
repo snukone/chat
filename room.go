@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 	"net/http"
-	"github.com/snukone/trace"
 
 	"github.com/gorilla/websocket"
+	"github.com/snukone/trace"
 )
 
 type room struct {

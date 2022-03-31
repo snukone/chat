@@ -5,9 +5,10 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"os"
 	"path/filepath"
 	"sync"
-	"os"
+
 	"github.com/snukone/trace"
 )
 
