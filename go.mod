@@ -1,4 +1,4 @@
-module chat
+module github.com/snukone/chat
 
 go 1.18
 

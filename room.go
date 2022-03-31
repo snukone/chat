@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
-	"trace"
+	"github.com/snukone/trace"
 
 	"github.com/gorilla/websocket"
 )
