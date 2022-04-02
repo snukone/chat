@@ -41,6 +41,7 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 
 	switch action {
 	case "login":
+		w.WriteHeader(http.StatusOK)
 		log.Println("TODO handle login for", provider)
 	default:
 		w.WriteHeader(http.StatusNotFound)
