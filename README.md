@@ -4,10 +4,9 @@
 [![Made with GH Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue?logo=github-actions&logoColor=white)](https://github.com/features/actions "Go to GitHub Actions homepage")
 [![Go](https://github.com/snukone/chat/actions/workflows/go.yml/badge.svg)](https://github.com/snukone/chat/actions/workflows/go.yml)
 [![Made with Go](https://img.shields.io/badge/Go-1.18-blue?logo=go&logoColor=white)](https://golang.org "Go to Go homepage")
-# chat
+# Chatroom for authenticated Users via Github, Facebook or Google
 
-## makes use of the following principles:
+## Makes use of the following desgin principles:
 - option pattern: makes parameters in structs optional; implemented in trace-module
-- decorator pattern: add additional functionality to handlers
-- wrapper handler: also the same usage as decorator pattern
+- decorator pattern: add additional functionality to handlers via wrappers
 - chaining pattern: making handlers dependend of each other
