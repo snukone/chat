@@ -10,6 +10,8 @@ import (
 	"sync"
 
 	"github.com/snukone/trace"
+	"github.com/stretchr/gomniauth"
+	"github.com/stretchr/gomniauth/providers/github"
 )
 
 // templ represents a single template
@@ -32,6 +34,12 @@ func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func main() {
 	var addr = flag.String("addr", ":8080", "The addr of the application.")
 	flag.Parse() // parse the flags
+	// set up gomniauth
+	gomniauth.SetSecurityKey("some long key")
+	gomniauth.WithProviders(
+		github.New("60a4c05cdc1199396d32", "3dfc10b50c17fed83bc354b268e10366a9ce46d9",
+			"http://localhost:8080/auth/callback/github"),
+	)
 	r := newRoom()
 	r.tracer = trace.New(os.Stdout)
 	http.Handle("/chat", MustAuth(&templateHandler{filename: "chat.html"}))
