@@ -6,7 +6,7 @@
 [![Made with Go](https://img.shields.io/badge/Go-1.18-blue?logo=go&logoColor=white)](https://golang.org "Go to Go homepage")
 # Chatroom for authenticated Users via Github
 
-## Makes use of the following desgin principles:
+## Makes use of the following design principles:
 - option pattern: makes parameters in structs optional; implemented in trace-module
 - decorator pattern: add additional functionality to handlers via wrappers
 - chaining pattern: making handlers dependend of each other
