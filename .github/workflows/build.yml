@@ -26,9 +26,12 @@ jobs:
 
     - name: Build
       run: |
-           go get github.com/snukone/trace
-           go get github.com/gorilla/websocket
-           go build -v ./...
+          go get github.com/snukone/trace
+          go get github.com/gorilla/websocket
+          go get github.com/stretchr/gomniauth
+          go get github.com/stretchr/gomniauth/providers/github
+          go get github.com/stretchr/objx
+          go build -v ./...
 
     - name: Run go vet
       run: go vet ./...
