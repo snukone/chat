@@ -45,6 +45,7 @@ func main() {
 	http.Handle("/login", &templateHandler{filename: "login.html"})
 	http.HandleFunc("/auth/", loginHandler)
 	http.Handle("/room", r)
+	http.Handle("/images/", http.StripPrefix("/images",	http.FileServer(http.Dir("images/"))))
 	// get the room going
 	go r.run()
 	// start the web server

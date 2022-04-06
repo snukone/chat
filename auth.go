@@ -29,6 +29,7 @@ func (h *authHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 // MustAuth ensures that only authenticated user may have access to the chat
+// uses decorator pattern
 func MustAuth(handler http.Handler) http.Handler {
 	return &authHandler{next: handler}
 }
