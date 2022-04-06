@@ -35,10 +35,9 @@ func main() {
 	var addr = flag.String("addr", ":8080", "The addr of the application.")
 	flag.Parse() // parse the flags
 	// set up gomniauth
-	gomniauth.SetSecurityKey("some long key")
+	gomniauth.SetSecurityKey("e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855")
 	gomniauth.WithProviders(
-		github.New("60a4c05cdc1199396d32", "3dfc10b50c17fed83bc354b268e10366a9ce46d9",
-			"http://localhost:8080/auth/callback/github"),
+		github.New("60a4c05cdc1199396d32", "3dfc10b50c17fed83bc354b268e10366a9ce46d9", "http://localhost:8080/auth/callback/github"),
 	)
 	r := newRoom()
 	r.tracer = trace.New(os.Stdout)
